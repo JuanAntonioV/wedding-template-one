@@ -23,9 +23,9 @@ const SectionTimer = () => {
     };
 
     return (
-        <section className={'h-[36rem] text-white relative'}>
+        <section className={'h-[36rem] sm:h-[40rem] text-white relative'}>
             <div className={'brightness-50 w-full h-full'}>
-                <div className={'w-full h-full brightness-50 bg-sectionImage'}></div>
+                <div className={'w-full h-full brightness-50 bg-sectionImage bg-center'}></div>
             </div>
 
             <div className={'absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 space-y-8 w-full'}>
@@ -39,7 +39,7 @@ const SectionTimer = () => {
                     <Countdown date={timer} renderer={renderer} overtime={true}/>
                 </div>
 
-                <div className={'w-full h-[180px] px-6'}>
+                <div className={'w-full h-[180px] px-6 mx-auto sm:w-[500px] sm:h-[250px]'}>
                     <img src="/assets/img/picture-one.jpg" alt="Picture One" className={'w-full h-full object-cover rounded-xl'}/>
                 </div>
             </div>
