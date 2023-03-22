@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Atlane';
+    font-style: normal;
+    font-weight: 300;
+    src: local('SFMono-Light'),
+    url('./atlane/Atlane-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Delycost';
+    font-style: normal;
+    font-weight: 300;
+    src: local('SFMono-Light'),
+    url('./delycost/Delycost-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FreeBooster';
+    font-style: normal;
+    font-weight: 300;
+    src: local('SFMono-Light'),
+    url('./freebooster/FreeBooster-Regular.ttf') format('truetype');
+}

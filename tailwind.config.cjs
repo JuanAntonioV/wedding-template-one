@@ -1,0 +1,26 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+    theme: {
+        extend: {
+            fontFamily: {
+                inter: ["Inter", "sans-serif"],
+                sofia: ["Sofia", "sans-serif"],
+                freebooster: ["Freebooster", "sans-serif"],
+                atlane: ["Atlane", "sans-serif"],
+                delycost: ["Delycost", "sans-serif"],
+            },
+            backgroundImage: {
+                'heroImage': "url('/public/assets/img/hero.jpg')",
+                'sectionImage': "url('/public/assets/img/section-one.jpg')",
+            }
+        },
+        container: {
+            center: true,
+        }
+    },
+    plugins: [],
+}
