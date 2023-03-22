@@ -10,7 +10,7 @@ interface RendererProps {
     completed: boolean;
 }
 
-const SectionTimer = () => {
+const TimerSection = () => {
 
     const [timer, setTimer] = useState(Date.now() + 10000)
 
@@ -23,12 +23,12 @@ const SectionTimer = () => {
     };
 
     return (
-        <section className={'h-[36rem] sm:h-[40rem] text-white relative'}>
-            <div className={'brightness-50 w-full h-full'}>
+        <section className={'py-16 text-white relative'}>
+            <div className={'brightness-50 w-full h-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 -z-10'}>
                 <div className={'w-full h-full brightness-50 bg-sectionImage bg-center'}></div>
             </div>
 
-            <div className={'absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 space-y-8 w-full'}>
+            <div className={'space-y-8 w-full'}>
                 <h2 className={'font-delycost text-4xl pb-2 text-center'}>Save The Date</h2>
 
                 <p className={'text-xs w-[300px] mx-auto text-center'}>Pernikahan adalah ibadah, dan setiap ibadah bermuara pada
@@ -47,4 +47,4 @@ const SectionTimer = () => {
     );
 };
 
-export default SectionTimer;
+export default TimerSection;

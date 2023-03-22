@@ -1,14 +1,13 @@
 import HeroSection from "../../common/HeroSection";
 import MainHeader from "../../components/headers/MainHeader";
-import SectionTimer from "../../common/SectionTimer";
+import TimerSection from "../../common/TimerSection";
 
 const HomePage = () => {
     return (
         <>
             <HeroSection/>
             <MainHeader/>
-
-            <SectionTimer/>
+            <TimerSection/>
         </>
     );
 };
