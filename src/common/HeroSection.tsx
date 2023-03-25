@@ -35,8 +35,8 @@ const HeroSection = () => {
                 <h3 className={'font-sofia text-xl'}>the wedding of</h3>
 
                 <div className={'pb-6'}>
-                    <h2 className={'font-freebooster text-4xl'}>Juan Antonio , S. Kom</h2>
-                    <h2 className={'font-atlane text-3xl pb-3'}>&</h2>
+                    <h2 className={'font-freebooster text-4xl'}>Rendy Iqbal , S.Kom</h2>
+                    <h2 className={'font-atlane text-3xl pb-4 py-2'}>&</h2>
                     <h2 className={'font-freebooster text-4xl'}>Christina Adel , S. Kom</h2>
 
                     <p className={'font-medium mt-2'}>Kamis, 20 April 2023</p>
