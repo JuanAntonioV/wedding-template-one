@@ -11,8 +11,9 @@ interface RendererProps {
 }
 
 const SectionTimer = () => {
-
-    const [timer, setTimer] = useState(Date.now() + 10000)
+    const date = new Date('2023-04-01 00:00:00');
+    const dateCompare = date.getTime() - Date.now();
+    const [timer, setTimer] = useState(Date.now() + dateCompare);
 
     const renderer = ({days, hours, minutes, seconds, completed}: RendererProps) => {
         if (completed) {
