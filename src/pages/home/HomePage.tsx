@@ -8,7 +8,7 @@ import SectionAttendance from "../../common/SectionAttendance";
 
 const HomePage = () => {
     return (
-        <>
+        <div className={'max-w-2xl mx-auto'}>
             <HeroSection/>
             <MainHeader/>
 
@@ -17,7 +17,7 @@ const HomePage = () => {
             <SectionLocation/>
             <SectionAttendance/>
             <SectionWishes/>
-        </>
+        </div>
     );
 };
 

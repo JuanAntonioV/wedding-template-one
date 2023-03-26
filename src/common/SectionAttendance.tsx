@@ -1,14 +1,14 @@
 const SectionAttendance = () => {
     return (
-        <section className={'relative'}>
-            <div className={' -translate-y-36 w-full px-8'}>
+        <section className={'relative -mb-16'}>
+            <div className={'-translate-y-36 w-full px-6'}>
                 <div className={'w-full bg-white py-6 relative shadow-xl rounded'}>
-                    <div className={'space-y-8 w-full px-4'}>
+                    <div className={'space-y-8 w-full px-6'}>
                         <p className={'text-center font-sofia text-black text-xl'}>Please, <br/>
                             take a moment and <br/>
                             respond to our invitation</p>
 
-                        <div className={'bg-black font-inter text-white text-center w-full py-1.5 rounded-xl'}>
+                        <div className={'bg-black font-inter text-white text-center w-full py-1.5 rounded-xl text-sm'}>
                             <p className={'font-inter tracking-wider'}>RSVP WILL BE OPEN UNTIL</p>
                             <p className={'font-inter tracking-wider'}>18 APRIL 2023</p>
                         </div>
@@ -16,7 +16,7 @@ const SectionAttendance = () => {
 
                     <h2 className={'text-black font-inter font-semibold text-lg pt-5 pb-4 text-center'}>RSVP</h2>
 
-                    <form className={'space-y-4 text-black w-full px-4 pb-8'}>
+                    <form className={'space-y-4 text-black w-full px-4 pb-6'}>
                         <div className={'space-y-2'}>
                             <span>Do you attending ?</span>
 
@@ -58,8 +58,8 @@ const SectionAttendance = () => {
                             <input type="text" id={'phone'} name={'phone'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. 085922992'}/>
                         </div>
 
-                        <div className={'flexCenter pt-2'}>
-                            <button className={'bg-black px-10 py-2 text-white rounded-xl'}>
+                        <div className={'flexCenter pt-4'}>
+                            <button className={'bg-black px-10 py-2 text-white rounded'}>
                                 Submit
                             </button>
                         </div>
