@@ -34,9 +34,16 @@ const HomePage = () => {
                 <SectionAttendance/>
                 <SectionGallery/>
                 <SectionWishes/>
-                
+
                 <RandomParticles/>
             </div>
+
+            <footer>
+                <div className={'py-4 text-center text-xs text-gray-400'}>
+                    <p>© 2023 Rendy Iqbal & Christina Adel</p>
+                    <p>Developed by Juan Antonio Vivaldy</p>
+                </div>
+            </footer>
         </>
     );
 };
