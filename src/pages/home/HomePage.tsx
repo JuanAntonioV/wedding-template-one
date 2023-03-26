@@ -5,6 +5,7 @@ import SectionWedding from "../../common/SectionWedding";
 import SectionLocation from "../../common/SectionLocation";
 import SectionWishes from "../../common/SectionWishes";
 import SectionAttendance from "../../common/SectionAttendance";
+import SectionGallery from "../../common/SectionGallery";
 
 const HomePage = () => {
     return (
@@ -16,6 +17,7 @@ const HomePage = () => {
             <SectionWedding/>
             <SectionLocation/>
             <SectionAttendance/>
+            <SectionGallery/>
             <SectionWishes/>
         </div>
     );

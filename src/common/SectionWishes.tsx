@@ -2,7 +2,7 @@ const SectionWishes = () => {
     return (
         <section>
             <div className={'space-y-6'}>
-                <h2 className={'font-delycost text-3xl text-center'}>Wedding Wish</h2>
+                <h2 className={'font-sofia text-3xl text-center'}>Wedding Wish</h2>
 
                 <form className={'space-y-4 text-black w-full px-6 pb-8'}>
                     <div className="flex flex-col space-y-2 pt-2">
