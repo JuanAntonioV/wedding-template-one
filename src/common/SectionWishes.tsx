@@ -6,7 +6,7 @@ const SectionWishes = () => {
         {
             fullName: 'Vivian Octavia',
             wishes: 'Most inspiring couple ever, thank you for letting us witness your journey',
-            posted: '2023-10-10'
+            posted: '2023-03-10'
         }
     ]);
 
