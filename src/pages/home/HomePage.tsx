@@ -8,25 +8,21 @@ import SectionAttendance from "../../common/SectionAttendance";
 import SectionGallery from "../../common/SectionGallery";
 import RandomParticles from "../../components/particles/RandomParticles";
 import {useEffect, useState} from "react";
+import Music from "/assets/sounds/sound.mp3";
 
 const HomePage = () => {
-    const [isPlaying, setIsPlaying] = useState(false);
-
-    const playAudio = () => {
-        setIsPlaying(true);
-    }
+    const [isPlaying, setIsPlaying] = useState(true);
 
     useEffect(() => {
-        playAudio();
+        setIsPlaying(true);
+        return () => setIsPlaying(false);
     }, []);
 
     return (
         <>
-            <audio autoPlay={isPlaying} loop={true} src={'/assets/sounds/sound.mp3'} onLoad={
-                () => {
-                    setIsPlaying(true);
-                }
-            }/>
+            <audio autoPlay={isPlaying} loop>
+                <source src={Music} type="audio/mp3"/>
+            </audio>
 
             <div className={'max-w-2xl mx-auto'}>
                 <HeroSection/>
