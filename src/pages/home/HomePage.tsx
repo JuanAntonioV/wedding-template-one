@@ -6,20 +6,37 @@ import SectionLocation from "../../common/SectionLocation";
 import SectionWishes from "../../common/SectionWishes";
 import SectionAttendance from "../../common/SectionAttendance";
 import SectionGallery from "../../common/SectionGallery";
+import RandomParticles from "../../components/particles/RandomParticles";
+import {useEffect, useState} from "react";
 
 const HomePage = () => {
-    return (
-        <div className={'max-w-2xl mx-auto'}>
-            <HeroSection/>
-            <MainHeader/>
+    const [isPlaying, setIsPlaying] = useState(false);
 
-            <SectionTimer/>
-            <SectionWedding/>
-            <SectionLocation/>
-            <SectionAttendance/>
-            <SectionGallery/>
-            <SectionWishes/>
-        </div>
+    const playAudio = () => {
+        setIsPlaying(true);
+    }
+
+    useEffect(() => {
+        playAudio();
+    }, []);
+
+    return (
+        <>
+            <audio autoPlay={isPlaying} loop={true} src={'/assets/sounds/sound.mp3'}/>
+
+            <div className={'max-w-2xl mx-auto'}>
+                <HeroSection/>
+                <MainHeader/>
+
+                <SectionTimer/>
+                <SectionWedding/>
+                <SectionLocation/>
+                <SectionAttendance/>
+                <SectionGallery/>
+                <SectionWishes/>
+                <RandomParticles/>
+            </div>
+        </>
     );
 };
 

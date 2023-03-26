@@ -43,7 +43,7 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            <div className={'absolute bottom-16 sm:bottom-32 left-1/2 -translate-x-1/2 flexCenter flex-col gap-y-4'} ref={scrollInfoRef}>
+            <div className={'absolute bottom-20 sm:bottom-32 left-1/2 -translate-x-1/2 flexCenter flex-col gap-y-4'} ref={scrollInfoRef}>
                 <span className={'text-base'}>Scroll down</span>
                 <BsArrowDown size={30} className={'animate-bounce'}/>
             </div>
