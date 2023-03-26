@@ -34,6 +34,7 @@ const HomePage = () => {
                 <SectionAttendance/>
                 <SectionGallery/>
                 <SectionWishes/>
+                
                 <RandomParticles/>
             </div>
         </>
