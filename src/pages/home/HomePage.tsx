@@ -13,10 +13,6 @@ const HomePage = () => {
             <SectionTimer/>
             <SectionWedding/>
             <SectionLocation/>
-
-            <div className={'h-screen'}>
-
-            </div>
         </>
     );
 };
