@@ -34,12 +34,12 @@ const SectionWishes = () => {
                 <form className={'space-y-4 text-black w-full px-6 pb-8'} onSubmit={addWishes}>
                     <div className="flex flex-col space-y-2 pt-2">
                         <label htmlFor="fullName" className={'font-semibold'}>Full name</label>
-                        <input type="text" id={'fullName'} name={'fullName'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. John doe'}/>
+                        <input type="text" id={'fullName'} name={'fullName'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. John doe'} required/>
                     </div>
 
                     <div className="flex flex-col space-y-2 pt-2">
                         <label htmlFor="wishes" className={'font-semibold'}>Please write your wishes here</label>
-                        <textarea id={'wishes'} name={'wishes'} rows={8} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'Type here...'}/>
+                        <textarea id={'wishes'} name={'wishes'} rows={8} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'Type here...'} required/>
                     </div>
 
                     <p className={'text-gray-400'}>What do you think about us?</p>
