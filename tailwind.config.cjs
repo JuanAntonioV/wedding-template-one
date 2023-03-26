@@ -14,8 +14,8 @@ module.exports = {
                 delycost: ["Delycost", "sans-serif"],
             },
             backgroundImage: {
-                'heroImage': "url('/public/assets/img/hero.jpg')",
-                'sectionImage': "url('/public/assets/img/section-one.jpg')",
+                'heroImage': "url('/assets/img/hero.jpg')",
+                'sectionImage': "url('/assets/img/section-one.jpg')",
             }
         },
         container: {
