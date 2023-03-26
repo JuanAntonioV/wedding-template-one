@@ -22,7 +22,11 @@ const HomePage = () => {
 
     return (
         <>
-            <audio autoPlay={isPlaying} loop={true} src={'/assets/sounds/sound.mp3'}/>
+            <audio autoPlay={isPlaying} loop={true} src={'/assets/sounds/sound.mp3'} onLoad={
+                () => {
+                    setIsPlaying(true);
+                }
+            }/>
 
             <div className={'max-w-2xl mx-auto'}>
                 <HeroSection/>

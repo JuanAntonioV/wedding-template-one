@@ -1,11 +1,26 @@
-import {useState} from "react";
+import {useRef, useState} from "react";
 
 const SectionAttendance = () => {
 
+    const phoneInputRef = useRef<HTMLInputElement>(null);
+    const phoneFriendInputRef = useRef<HTMLInputElement>(null);
     const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
+
+        if (phoneInputRef.current?.value[0] !== '0' || phoneInputRef.current?.value[1] !== '8') {
+            setError(true);
+            return;
+        }
+
+        if (phoneFriendInputRef.current?.value[0] !== '0' || phoneFriendInputRef.current?.value[1] !== '8') {
+            setError(true);
+            return;
+        }
+
+        setError(false);
         setSuccess(true);
 
         // clear form
@@ -62,13 +77,29 @@ const SectionAttendance = () => {
 
                         <div className="flex flex-col space-y-2">
                             <label htmlFor="phone" className={'font-semibold'}>Phone number / Whatsapp</label>
-                            <input type="text" id={'phone'} name={'phone'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. 085922992'} required/>
+                            <input type="text" ref={phoneInputRef} id={'phone'} name={'phone'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. 085922992'} required onChange={
+                                (e) => {
+                                    const value = e.target.value;
+                                    const regex = new RegExp('^[0-9]+$');
+                                    if (value.length > 0 && !regex.test(value)) {
+                                        e.target.value = value.slice(0, -1);
+                                    }
+                                }
+                            }/>
                         </div>
 
                         <div className="flex flex-col space-y-2">
-                            <label htmlFor="phone" className={'font-semibold'}>Total guests (including you max. 2 guests
+                            <label htmlFor="phoneFriend" className={'font-semibold'}>Total guests (including you max. 2 guests
                                 (unless otherwise stated)</label>
-                            <input type="text" id={'phone'} name={'phone'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. 085922992'} required/>
+                            <input type="text" ref={phoneFriendInputRef} id={'phoneFriend'} name={'phoneFriend'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. 085922992'} required onChange={
+                                (e) => {
+                                    const value = e.target.value;
+                                    const regex = new RegExp('^[0-9]+$');
+                                    if (value.length > 0 && !regex.test(value)) {
+                                        e.target.value = value.slice(0, -1);
+                                    }
+                                }
+                            }/>
                         </div>
 
                         <div className={'flexCenter pt-4'}>
@@ -80,6 +111,11 @@ const SectionAttendance = () => {
                         {success && (
                             <div className={'flexCenter'}>
                                 <p className={'text-center text-green-500 font-inter font-semibold text-sm'}>Thank you for your response</p>
+                            </div>
+                        )}
+                        {error && (
+                            <div className={'flexCenter'}>
+                                <p className={'text-center text-red-500 font-inter font-semibold text-sm'}>Please fill with valid phone number</p>
                             </div>
                         )}
                     </form>
