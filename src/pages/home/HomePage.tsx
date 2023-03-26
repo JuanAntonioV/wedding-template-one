@@ -9,17 +9,21 @@ import SectionGallery from "../../common/SectionGallery";
 
 const HomePage = () => {
     return (
-        <div className={'max-w-2xl mx-auto'}>
-            <HeroSection/>
-            <MainHeader/>
+        <>
+            <audio autoPlay={true} loop={true} src={'/assets/sounds/sound.mp3'}/>
 
-            <SectionTimer/>
-            <SectionWedding/>
-            <SectionLocation/>
-            <SectionAttendance/>
-            <SectionGallery/>
-            <SectionWishes/>
-        </div>
+            <div className={'max-w-2xl mx-auto'}>
+                <HeroSection/>
+                <MainHeader/>
+
+                <SectionTimer/>
+                <SectionWedding/>
+                <SectionLocation/>
+                <SectionAttendance/>
+                <SectionGallery/>
+                <SectionWishes/>
+            </div>
+        </>
     );
 };
 
