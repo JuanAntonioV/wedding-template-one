@@ -6,11 +6,23 @@ import SectionLocation from "../../common/SectionLocation";
 import SectionWishes from "../../common/SectionWishes";
 import SectionAttendance from "../../common/SectionAttendance";
 import SectionGallery from "../../common/SectionGallery";
+import RandomParticles from "../../components/particles/RandomParticles";
+import {useEffect, useState} from "react";
 
 const HomePage = () => {
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const playAudio = () => {
+        setIsPlaying(true);
+    }
+
+    useEffect(() => {
+        playAudio();
+    }, []);
+
     return (
         <>
-            <audio autoPlay={true} loop={true} src={'/assets/sounds/sound.mp3'}/>
+            <audio autoPlay={isPlaying} loop={true} src={'/assets/sounds/sound.mp3'}/>
 
             <div className={'max-w-2xl mx-auto'}>
                 <HeroSection/>
@@ -22,6 +34,7 @@ const HomePage = () => {
                 <SectionAttendance/>
                 <SectionGallery/>
                 <SectionWishes/>
+                <RandomParticles/>
             </div>
         </>
     );
