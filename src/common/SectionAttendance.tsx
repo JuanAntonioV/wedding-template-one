@@ -1,4 +1,17 @@
+import {useState} from "react";
+
 const SectionAttendance = () => {
+
+    const [success, setSuccess] = useState(false);
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        setSuccess(true);
+
+        // clear form
+        e.target.reset();
+    }
+
     return (
         <section className={'relative -mb-16'}>
             <div className={'-translate-y-36 w-full px-6'}>
@@ -16,13 +29,13 @@ const SectionAttendance = () => {
 
                     <h2 className={'text-black font-inter font-semibold text-lg pt-5 pb-4 text-center'}>RSVP</h2>
 
-                    <form className={'space-y-4 text-black w-full px-4 pb-6'}>
+                    <form className={'space-y-4 text-black w-full px-4 pb-6'} onSubmit={handleSubmit}>
                         <div className={'space-y-2'}>
                             <span>Do you attending ?</span>
 
                             <div className="flex items-center mb-4">
                                 <input id="country-option-1" type="radio" name="countries" value="USA" className="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300"
-                                       aria-labelledby="country-option-1" aria-describedby="country-option-1" checked/>
+                                       aria-labelledby="country-option-1" aria-describedby="country-option-1" checked required/>
                                 <label htmlFor="country-option-1" className="text-sm font-medium text-gray-900 ml-2 block">
                                     Yes, I will attend
                                 </label>
@@ -30,7 +43,7 @@ const SectionAttendance = () => {
 
                             <div className="flex items-center mb-4">
                                 <input id="country-option-1" type="radio" name="countries" value="USA" className="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300"
-                                       aria-labelledby="country-option-1" aria-describedby="country-option-1" checked/>
+                                       aria-labelledby="country-option-1" aria-describedby="country-option-1" required/>
                                 <label htmlFor="country-option-1" className="text-sm font-medium text-gray-900 ml-2 block">
                                     No, Sorry cant’t make it
                                 </label>
@@ -39,23 +52,23 @@ const SectionAttendance = () => {
 
                         <div className="flex flex-col space-y-2 pt-2">
                             <label htmlFor="fullName" className={'font-semibold'}>Full name</label>
-                            <input type="text" id={'fullName'} name={'fullName'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. John doe'}/>
+                            <input type="text" id={'fullName'} name={'fullName'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. John doe'} required/>
                         </div>
 
                         <div className="flex flex-col space-y-2">
                             <label htmlFor="email" className={'font-semibold'}>Email</label>
-                            <input type="text" id={'email'} name={'email'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. johndoe@gmail.com'}/>
+                            <input type="text" id={'email'} name={'email'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. johndoe@gmail.com'} required/>
                         </div>
 
                         <div className="flex flex-col space-y-2">
                             <label htmlFor="phone" className={'font-semibold'}>Phone number / Whatsapp</label>
-                            <input type="text" id={'phone'} name={'phone'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. 085922992'}/>
+                            <input type="text" id={'phone'} name={'phone'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. 085922992'} required/>
                         </div>
 
                         <div className="flex flex-col space-y-2">
                             <label htmlFor="phone" className={'font-semibold'}>Total guests (including you max. 2 guests
                                 (unless otherwise stated)</label>
-                            <input type="text" id={'phone'} name={'phone'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. 085922992'}/>
+                            <input type="text" id={'phone'} name={'phone'} className={'bg-gray-200 px-6 py-3 rounded'} placeholder={'E.g. 085922992'} required/>
                         </div>
 
                         <div className={'flexCenter pt-4'}>
@@ -63,6 +76,12 @@ const SectionAttendance = () => {
                                 Submit
                             </button>
                         </div>
+
+                        {success && (
+                            <div className={'flexCenter'}>
+                                <p className={'text-center text-green-500 font-inter font-semibold text-sm'}>Thank you for your response</p>
+                            </div>
+                        )}
                     </form>
                 </div>
 
